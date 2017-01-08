@@ -1,0 +1,20 @@
+{
+    "name": "beaumind/eloquent-complement",
+    "description": "add some usable features to laravel eloquent",
+    "require": {
+        "php": ">=5.4",
+        "illuminate/support": "^5.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "A.Hassani",
+            "email": "a.hassani.sbu@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Beaumind\\EloquentComplement\\": "src"
+        }
+    },
+}
