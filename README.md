@@ -21,3 +21,4 @@ class Post extends \Eloquent
 
 }
 ```
+# Save Associated models
