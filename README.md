@@ -14,19 +14,6 @@ class Post extends \Eloquent
 {
     use EloquentComplement;
 
-    /**
-     * Searchable columns.
-     *
-     * @var array
-     */
-    public $searchable_fields = [
-      title,
-      body,
-      user.name,
-      uesr.email
-    ];
-
-
     public function user()
     {
         return $this->belongsTo('User');
