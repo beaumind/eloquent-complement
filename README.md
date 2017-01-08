@@ -13,7 +13,12 @@ use Beaumind\EloquentComplement\EloquentComplement;
 class Question extends Model
 {
     use EloquentComplement;
-
+    
+    public function user()
+    {
+        return $this->belongsTo('User');
+    }
+    
     public function answers()
     {
         return $this->hasMany('Answer');
@@ -24,11 +29,17 @@ class Question extends Model
 ```php
 class Answer extends Model
 {
-    public function question()
-    {
-        return $this->belongsTo('Question');
-    }
-
+    .
+    .
+    .
+}
+```
+```php
+class User extends Model
+{
+    .
+    .
+    .
 }
 ```
 # Save Associated models
