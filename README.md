@@ -40,3 +40,6 @@ class User extends Model
 ```
 # Save Associated models
 you can now save question and related models in one step. it is atomic and it will role back on failure. also it fill foreign keys automatically.
+```php
+$question['body'] = 'some question body';
+```
