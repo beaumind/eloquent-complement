@@ -10,13 +10,23 @@ composer require beaumind/eloquent-complement
 ```php
 use Beaumind\EloquentComplement\EloquentComplement;
 
-class Post extends \Eloquent
+class Question extends Model
 {
     use EloquentComplement;
 
-    public function user()
+    public function answers()
     {
-        return $this->belongsTo('User');
+        return $this->hasMany('Answer');
+    }
+
+}
+```
+```php
+class Answer extends Model
+{
+    public function question()
+    {
+        return $this->belongsTo('Question');
     }
 
 }
