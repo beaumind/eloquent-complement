@@ -42,4 +42,14 @@ class User extends Model
 you can now save question and related models in one step. it is atomic and it will role back on failure. also it fill foreign keys automatically.
 ```php
 $question['body'] = 'some question body';
+
+$question['user']['name'] = 'joe';
+$question['user']['username'] = 'joe_m';
+...
+
+$question['answers']['body'] = 'some answer body';
+$question['answers']['is_correct'] = true;
+
 ```
+now save in database.
+(New Question())->saveAssociated($question, ['user','answers']);
