@@ -52,4 +52,7 @@ $question['answers']['is_correct'] = true;
 
 ```
 now save in database.
+```php
 (New Question())->saveAssociated($question, ['user','answers']);
+```
+
